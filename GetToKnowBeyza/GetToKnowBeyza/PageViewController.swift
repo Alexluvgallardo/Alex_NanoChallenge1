@@ -12,8 +12,6 @@ var mainVC =  PageViewController()
 
 class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     
-//    var imageView: UIImageView?
-    
     var pageControl = UIPageControl()
     
     lazy var orderedViewControllers: [UIViewController] = {
@@ -37,13 +35,10 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
                                direction: .forward, animated: true, completion: nil)
         }
         
-        
-
         configurePageControl()
         
     }
 
-    
     func configurePageControl(){
         //property of pageControl
         pageControl = UIPageControl(frame: CGRect(x: 0, y: UIScreen.main.bounds.maxY - 50 , width: UIScreen.main.bounds.width, height: 50))
@@ -77,9 +72,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
             return nil
         }
         
-//        showNavigationBar()
         return orderedViewControllers[previousIndex]
-        
     }
     
     //pageviewcontrollerafter
@@ -106,6 +99,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
     //delegate page control
     
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        
         let pageContentViewController = pageViewController.viewControllers![0]
         self.pageControl.currentPage = orderedViewControllers.index(of: pageContentViewController)!
     }
@@ -114,7 +108,6 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
     @IBAction func unwindToHomeViewController(segue: UIStoryboardSegue) {
         // Do nothing
     }
-    
 }
     
 

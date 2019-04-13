@@ -10,20 +10,18 @@ import Foundation
 import UIKit
 
 struct Score {
-    static var shared = Score(points: 0)
     var points: Int
+    static var shared = Score(points: 0)
 }
 
 struct Question{
-    static var shared = Question(question_no: 0)
     var question_no : Int
-    
-    
+    static var shared = Question(question_no: 0)
 }
 
 struct Correct{
-    static var shared = Correct(correct: false)
     var correct : Bool
+    static var shared = Correct(correct: false)
 }
 
 

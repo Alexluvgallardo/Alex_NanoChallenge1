@@ -20,16 +20,6 @@ class backgroundViewController: UIViewController {
         showNavigationBar()
         
         addingImageBackground()
-   
-        
-//            if let foundView = view.viewWithTag(200) {
-////                foundView.backgroundColor = .black
-//
-////                print(foundView)
-////                addingImageBackground(foundView)
-////    //            self.view.bringSubviewToFront(foundView)
-////                foundView.layer.zPosition = 10
-//            }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,10 +36,6 @@ class backgroundViewController: UIViewController {
         imageView = UIImageView(frame: view.bounds) //not overlapping
         imageView = UIImageView(image: UIImage(named:"MyBackground_bg")!)
         
-        
-//        imageView!.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
-//        imageView!.bounds = CGRect(x: 0, y: 0, width: 200, height: 500)
-        
         imageView!.alpha = 0.1
         imageView!.tag = 100
         imageView!.contentMode = .scaleAspectFill
@@ -58,16 +44,6 @@ class backgroundViewController: UIViewController {
         self.view.addSubview(imageView!)
         self.view.sendSubviewToBack(imageView!)
     }
- 
-//    func removeSubview(){
-//        print("Start remove sibview")
-//        if let viewWithTag = self.view.viewWithTag(100) {
-//            viewWithTag.removeFromSuperview()
-//        }else{
-//            print("No!")
-//        }
-//    }
-
 }
 
 

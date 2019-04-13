@@ -24,15 +24,6 @@ class firstbackgroundViewController: UIViewController {
         
         addingImageBackground()
    
-        
-//            if let foundView = view.viewWithTag(200) {
-////                foundView.backgroundColor = .black
-//
-////                print(foundView)
-////                addingImageBackground(foundView)
-////    //            self.view.bringSubviewToFront(foundView)
-////                foundView.layer.zPosition = 10
-//            }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,18 +31,12 @@ class firstbackgroundViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-//        removeSubview()
+        
     }
     
     func addingImageBackground(){
-//        imageView = UIImageView(image: #imageLiteral(resourceName: "MyBackground_bg"))
-        
         imageView = UIImageView(frame: view.bounds) //not overlapping
         imageView = UIImageView(image: UIImage(named:"MyBackground_bg")!)
-        
-        
-//        imageView!.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
-//        imageView!.bounds = CGRect(x: 0, y: 0, width: 200, height: 500)
         
         imageView!.alpha = 0.1
         imageView!.tag = 100
@@ -61,9 +46,6 @@ class firstbackgroundViewController: UIViewController {
         self.view.addSubview(imageView!)
         self.view.sendSubviewToBack(imageView!)
     }
- 
-    
-
 }
 
 

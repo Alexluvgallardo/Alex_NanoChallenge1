@@ -11,8 +11,6 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +18,6 @@ class ViewController: UIViewController {
         hideNavigationBar()
         
         self.view.sendSubviewToBack(imageView!)
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,8 +26,6 @@ class ViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-//        imageView.isHidden = true
-        
         showNavigationBar()
     }
     
@@ -45,8 +40,6 @@ class ViewController: UIViewController {
         backItem.tintColor = .gray
         navigationItem.backBarButtonItem = backItem // This will show in the next view controller being pushed
     }
-    
-
 }
 
 extension UIViewController {
@@ -59,5 +52,4 @@ extension UIViewController {
         // Show the navigation bar on other view controllers
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
-    
 }
